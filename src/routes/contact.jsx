@@ -19,11 +19,7 @@ const Contact = () => {
   const schema = yup.object().shape({
     name: yup.string().min(3).required("Name is required"),
     subject: yup.string().min(3).required("Subject is required"),
-    email: yup
-      .string()
-      .email()
-      .matches(/^[\w]+@([\w-])+[\w-]{2,4}$/g, "Invalid Email")
-      .required("Email is required"),
+    email: yup.string().email().required("Email is required"),
     message: yup.string().required("Message is required"),
   });
 
