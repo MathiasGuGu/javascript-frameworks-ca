@@ -4,6 +4,7 @@ import { useApiStore } from "../../store";
 import { Link } from "react-router-dom";
 
 const Searchbox = ({ search, setIsActive }) => {
+  /* eslint-disable jsx-a11y/anchor-is-valid */
   const [searchResults, setSearchResults] = useState([]);
 
   const items = useApiStore((state) => state.products);
@@ -18,7 +19,7 @@ const Searchbox = ({ search, setIsActive }) => {
 
       setSearchResults(searchResults);
     }
-  }, [search]);
+  }, [search, data]);
 
   return (
     <div className="z-50 fixed top-14 left-0 md:left-1/2 md:-translate-x-1/2 bg-white rounded-lg shadow-md px-5  py-8 flex flex-col gap-3  w-screen max-w-2xl h-auto min-h-[200px] max-h-[500px] overflow-scroll">
@@ -52,7 +53,7 @@ const Searchbox = ({ search, setIsActive }) => {
   );
 };
 
-const Searchbar = ({}) => {
+const Searchbar = () => {
   const [isActive, setIsActive] = useState(false);
   const [search, setSearch] = useState("");
 

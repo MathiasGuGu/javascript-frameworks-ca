@@ -18,6 +18,7 @@ const CartItem = ({ item }) => {
     <div className=" w-full h-auto flex items-center justify-between border-b py-2">
       <div className="flex gap-2 md:gap-4 h-full w-auto py-2">
         <img
+          alt={title}
           src={item.data.image.url}
           className="object-cover h-28 aspect-square"
         ></img>

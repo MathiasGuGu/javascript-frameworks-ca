@@ -28,7 +28,7 @@ const ItemCard = ({ item, selectedTags }) => {
       let match = selectedTags.some((tag) => tags.includes(tag));
       setShow(match);
     }
-  }, [selectedTags]);
+  }, [selectedTags, tags]);
 
   if (!show) return null;
 

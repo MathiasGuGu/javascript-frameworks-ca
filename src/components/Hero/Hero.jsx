@@ -18,7 +18,7 @@ const Hero = () => {
         {images.concat(images).map((image, index) => {
           return (
             <img
-              alt="hero image"
+              alt="hero"
               className="w-1/3 h-[500px] md:h-auto object-cover"
               key={index}
               src={image}

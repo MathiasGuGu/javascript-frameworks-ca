@@ -8,17 +8,15 @@ const Checkout = () => {
 
   const [isLoading, setIsLoading] = useState(true);
 
-  const simulateLoading = () => {
+  useEffect(() => {
     setIsLoading(true);
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setIsLoading(false);
       removeAllItems();
     }, 300);
-  };
 
-  useEffect(() => {
-    simulateLoading();
-  }, []);
+    return () => clearTimeout(timeout);
+  }, [removeAllItems]);
 
   return (
     <>
