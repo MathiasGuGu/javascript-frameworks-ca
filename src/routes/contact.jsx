@@ -22,7 +22,7 @@ const Contact = () => {
     email: yup
       .string()
       .email()
-      .matches(/^[\w-\.]+@([\w-])+[\w-]{2,4}$/g, "Invalid Email")
+      .matches(/^[\w]+@([\w-])+[\w-]{2,4}$/g, "Invalid Email")
       .required("Email is required"),
     message: yup.string().required("Message is required"),
   });
