@@ -46,6 +46,15 @@ const Item = () => {
       </div>
     );
   }
+  if (isLoading) {
+    return (
+      <div className="w-screen h-screen flex flex-col items-center justify-center">
+        <p className="text-xl">
+          <Loader2 className="animate-spin" />
+        </p>
+      </div>
+    );
+  }
 
   if (!item) {
     return (

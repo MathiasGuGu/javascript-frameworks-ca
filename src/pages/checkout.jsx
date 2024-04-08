@@ -20,8 +20,6 @@ const Checkout = () => {
     simulateLoading();
   }, []);
 
-  useEffect(() => {}, [isLoading]);
-
   return (
     <>
       <div className="w-screen h-auto mt-64 flex flex-col items-center justify-center gap-2">

@@ -8,10 +8,8 @@ const Home = () => {
   const data = useApiStore((state) => state.products);
   const [tags, setTags] = useState(new Set());
   const [selectedTags, setSelectedTags] = useState([]);
-  const [filter, setFilter] = useState(false);
 
   if (data.length === 0 && !useApiStore.getState().error) {
-    console.log("fetching");
     useApiStore.getState().fetchProducts();
   }
 
@@ -79,12 +77,7 @@ const Home = () => {
       <div className="w-screen min-h-screen lg:px-24 md:px-8 px-2  py-12 h-auto grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 lg:gap-6 md:gap-4 gap-2 max-w-7xl">
         {data.data.map((item) => {
           return (
-            <ItemCard
-              key={item.id}
-              item={item}
-              selectedTags={selectedTags}
-              filter={filter}
-            />
+            <ItemCard key={item.id} item={item} selectedTags={selectedTags} />
           );
         })}
       </div>

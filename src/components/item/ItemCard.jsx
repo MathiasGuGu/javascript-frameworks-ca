@@ -5,18 +5,8 @@ import { calculateDiscountPercent } from "../../lib/utils";
 import { Link } from "react-router-dom";
 import PriceCut from "../price/PriceCut";
 
-const ItemCard = ({ item, filter, selectedTags }) => {
-  const {
-    id,
-    title,
-    description,
-    discountedPrice,
-    price,
-    tags,
-    reviews,
-    rating,
-    image,
-  } = item;
+const ItemCard = ({ item, selectedTags }) => {
+  const { id, title, discountedPrice, price, tags, image } = item;
 
   const [show, setShow] = useState(true);
 
