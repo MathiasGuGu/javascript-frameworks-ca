@@ -5,7 +5,7 @@ import Footer from "./footer";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-between items-center">
       <Header />
       <Outlet />
       <Footer />
