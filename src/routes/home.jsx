@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useFetch } from "../hooks/useFetch";
-import { BASE_URL } from "../data";
 import ItemCard from "../components/item/ItemCard";
 import { Filter, Loader2 } from "lucide-react";
 import { useApiStore } from "../store";
-import { shallow } from "zustand/shallow";
 import Hero from "../components/Hero/Hero";
 
 const Home = () => {

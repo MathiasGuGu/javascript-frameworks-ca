@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import CartButton from "../../cart/CartButton";
 import { headerData } from "../../../data/Navigation/HeaderData";
 import { useState } from "react";
-import { Heart, Menu, SearchIcon } from "lucide-react";
+import { Heart, Menu } from "lucide-react";
 import Searchbar from "../../header/Searchbar";
 
 const Header = () => {

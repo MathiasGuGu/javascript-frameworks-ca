@@ -1,7 +1,6 @@
 import { Heart, MinusCircle, PlusCircle } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useStore } from "../../store";
-import { shallow } from "zustand/shallow";
 import { calculateDiscountPercent } from "../../lib/utils";
 import { Link } from "react-router-dom";
 import PriceCut from "../price/PriceCut";

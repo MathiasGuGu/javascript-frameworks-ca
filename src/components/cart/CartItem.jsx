@@ -1,4 +1,4 @@
-import { Heart, Link, MinusSquare, PlusSquare, Trash2 } from "lucide-react";
+import { Heart, MinusSquare, PlusSquare, Trash2 } from "lucide-react";
 import React from "react";
 import { useStore } from "../../store";
 import { NavLink } from "react-router-dom";

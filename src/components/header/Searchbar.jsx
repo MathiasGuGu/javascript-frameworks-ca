@@ -1,4 +1,4 @@
-import { Link2, MoveRight, SearchIcon } from "lucide-react";
+import { MoveRight, SearchIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useApiStore } from "../../store";
 import { Link } from "react-router-dom";
